@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Live Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Syntax Highlighters -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.js"></script>
+</head>
+
+<body>
+
+
+    <section class="container">
+        <div class="left">
+            <div class="label-list">
+                <label for="">HTML</label>
+                <label class="download" onclick="run()">Run </label>
+            </div>
+            <textarea onkeyup="run()" name="" id="html-code" cols="30" rows="10"><h1>hello world</h1></textarea>
+
+            <label for="">CSS</label>
+            <textarea onkeyup="run()" name="" id="css-code" cols="30" rows="10">h1{color:red}</textarea>
+
+            <label for="">JavaScript</label>
+            <textarea onkeyup="run()" name="" id="js-code" cols="30" rows="10"> console.log('hey');</textarea>
+        </div>
+        <div class="right">
+            <!-- <button id="downloadButton"  >Download as ZIP</button> -->
+            <div class="label-list">
+                <label for="">Output</label>
+                <label class="download" onclick="download()">Download as ZIP</label>
+            </div>
+            <iframe id="output" src="" frameborder="0"></iframe>
+        </div>
+    </section>
+    <footer style="padding-bottom:20px; text-align: center; align-content: center; ">
+        <p style="font-size: 20px;">2023-<span id="year"></span> Created by
+            <a href="https://www.facebook.com/AbdurRahim1996" style="color: #fff;">Abdur Rahim</a>
+        </p>
+    </footer>
+
+    <script src="./script.js"></script>
+    <!-- download as zip -->
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+</body>
+
+</html>
